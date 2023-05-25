@@ -1,5 +1,10 @@
 ## Anima Full Stack Technical
 
+### Deployments
+
+Client - https://anima-calendar.vercel.app/ <br/>
+Server - https://anima-calendar-server.onrender.com/api/events
+
 ### Overview
 
 This is a calendar app that allows users to manage their events. The app displays a calendar view for the day, 
