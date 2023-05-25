@@ -98,10 +98,10 @@ const AddEvents = ({ createEvent, error }) => {
                     control={control}
                     name='start'
                     render={({ field }) => {
-                        console.log('start', field);
                         return (
                             <>
                                 <DatePicker
+                                    placeholderText='When does it start?'
                                     onChange={(date) => field.onChange(date)}
                                     selected={field.value}
                                     value={field.value}
@@ -120,12 +120,13 @@ const AddEvents = ({ createEvent, error }) => {
                                         }}
                                         className='btn btn-secondary'
                                     >
-                                        Add for{' '}
+                                        Add event for{' '}
                                         {
                                             startDate
                                                 .toLocaleString()
                                                 .split(',')[0]
                                         }
+                                        ?
                                     </button>
                                 )}
                             </>
@@ -147,9 +148,9 @@ const AddEvents = ({ createEvent, error }) => {
                     control={control}
                     name='end'
                     render={({ field }) => {
-                        console.log('end', field);
                         return (
                             <DatePicker
+                                placeholderText='When does it end?'
                                 onChange={(date) => field.onChange(date)}
                                 selected={field.value}
                                 value={field.value}
