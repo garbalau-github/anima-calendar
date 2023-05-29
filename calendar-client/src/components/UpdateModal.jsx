@@ -42,7 +42,10 @@ const UpdateModal = ({
     );
 };
 
-// Redux
+// We export the component as the default export of the module and connect
+// it to the Redux store. The connect function is a higher-order function provided
+// by React Redux library. It connects a React component to the Redux store, allowing
+// the component to access the state and dispatch actions.
 function mapStateToProps({ event }) {
     return {
         event,

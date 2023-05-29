@@ -24,6 +24,13 @@ const UpdateEvent = ({ updateEvent, event, error }) => {
     const navigate = useNavigate();
     const [rerender, setRerender] = useState(false);
     const [dbError, setError] = useState(false);
+
+    // It is used in the useEffect hook to determine if an error occurred during the
+    // update process and if it is the first render of the component.
+
+    // Overall, the firstRender state helps in handling and distinguishing the behavior
+    // between the first render of the component and subsequent renders, especially
+    // when it comes to error handling and navigation after the update process.
     const [firstRender, setFirstRender] = useState(true);
 
     useEffect(() => {
@@ -163,6 +170,10 @@ const UpdateEvent = ({ updateEvent, event, error }) => {
     );
 };
 
+// We export the component as the default export of the module and connect
+// it to the Redux store. The connect function is a higher-order function provided
+// by React Redux library. It connects a React component to the Redux store, allowing
+// the component to access the state and dispatch actions.
 function mapStateToProps({ event, error }) {
     return {
         event,
